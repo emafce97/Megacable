@@ -9,7 +9,7 @@ class Cursor:
         self.cursor = self.conexion.cursor()
         return self.cursor
     
-    def __exit__(self):
+    def __exit__(self, exc_type, exc_val, exc_tb):
         if exc_val:
             self.conexion.rollback()
         else:
