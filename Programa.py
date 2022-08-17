@@ -1,5 +1,4 @@
 from Logica import Logica
-import sys
 
 
 class Programa:
