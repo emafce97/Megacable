@@ -20,7 +20,7 @@ class Logica:
             Logica.__lanzarExcepcion(e)
     
     @classmethod
-    def buscarPersona(self):
+    def buscarCliente(self):
         dni = int(input("Ingrese el DNI del cliente: "))
         dni_tupla = (dni,)
         try:
