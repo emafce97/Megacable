@@ -16,4 +16,4 @@ class Cursor:
         if exc_val:
             self.conexion.rollback()
         else:
-            self.conexon.commit()
+            self.conexion.commit()
