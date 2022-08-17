@@ -8,7 +8,7 @@ class Logica:
         print(f"Ocurrio la excepcion: {e}")
 
     @classmethod
-    def agregarCliente(self):
+    def agregarCliente(cls):
         datos_cliente = input("Ingrese los datos separados por coma: ").split(",")
         datos_cliente_tupla = tuple(datos_cliente)
         try:
@@ -20,7 +20,7 @@ class Logica:
             Logica.__lanzarExcepcion(e)
     
     @classmethod
-    def buscarCliente(self):
+    def buscarCliente(cls):
         dni = int(input("Ingrese el DNI del cliente: "))
         dni_tupla = (dni,)
         try:
