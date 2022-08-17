@@ -12,7 +12,7 @@ class Programa:
             print("Bienvenido a Megacable\n1-Opciones disponibles:\n1-Registrar cliente\n2-Buscar cliente\n3-Eliminar cliente\n4-Salir")
             opcion = int(input("Ingrese su opcion: "))
             if opcion == 1:
-                Logica.ingresarCliente()
+                Logica.agregarCliente()
             elif opcion == 2:
                 Logica.buscarCliente()
             elif opcion == 3:
