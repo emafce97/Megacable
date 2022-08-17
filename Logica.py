@@ -9,7 +9,7 @@ class Logica:
 
     @classmethod
     def agregarCliente(self):
-        datos_cliente = (input("Ingrese los datos separados por coma: "),)
+        datos_cliente = (input("Ingrese los datos separados por coma: ").split(","),)
         try:
             with Cursor() as cursor:
                 sentencia = "INSERT INTO clientes(nombre,apellido,dni) VALUES(%s,%s,%s)"
@@ -17,3 +17,5 @@ class Logica:
                 print("Se añadio el cliente")
         except Exception as e:
             Logica.__lanzarExcepcion(e)
+
+    
