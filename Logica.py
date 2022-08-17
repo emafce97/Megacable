@@ -30,5 +30,17 @@ class Logica:
                 print(cursor.fetchone())
         except Exception as e:
             Logica.__lanzarExcepcion(e)
+    
+    @classmethod
+    def eliminarCliente(cls):
+        dni = int(input("Ingrese el DNI del cliente: "))
+        dni_tupla = (dni,)
+        try:
+            with Cursor() as cursor:
+                sentencia = "DELETE FROM clientes WHERE dni=%s"
+                cursor.execute(sentencia,dni_tupla)
+                print("Cliente eliminado")
+        except Exception as e:
+            Logica.__lanzarExcepcion(e)
 
     
