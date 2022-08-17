@@ -18,5 +18,17 @@ class Logica:
                 print("Se añadio el cliente")
         except Exception as e:
             Logica.__lanzarExcepcion(e)
+    
+    @classmethod
+    def buscarPersona(self):
+        dni = int(input("Ingrese el DNI del cliente: "))
+        dni_tupla = (dni,)
+        try:
+            with Cursor() as cursor:
+                sentencia = "SELECT * FROM clientes WHERE dni=%s"
+                cursor.execute(sentencia,dni_tupla)
+                print(cursor.fetchone())
+        except Exception as e:
+            Logica.__lanzarExcepcion(e)
 
     
