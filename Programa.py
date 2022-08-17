@@ -7,9 +7,10 @@ class Programa:
     @classmethod
     def run(cls):
         opcion = None
-        while opcion != 5:
+        termino = False
+        while termino == False:
             print("Bienvenido a Megacable\n1-Opciones disponibles:\n1-Registrar cliente\n2-Buscar cliente\n3-Eliminar cliente\n4-Salir")
-            opcion = input("Ingrese su opcion: ")
+            opcion = int(input("Ingrese su opcion: "))
             if opcion == 1:
                 Logica.ingresarCliente()
             elif opcion == 2:
@@ -18,5 +19,7 @@ class Programa:
                 Logica.eliminarCliente()
             elif opcion == 4:
                 print("Saliendo...")
-                sys.exit()
+                termino = True
 
+if __name__ == "__main__":
+    Programa.run()
