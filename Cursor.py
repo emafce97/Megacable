@@ -1,3 +1,6 @@
+from Conexion import Conexion
+
+
 class Cursor:
 
     def __init__(self):
