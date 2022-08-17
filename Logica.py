@@ -1,3 +1,6 @@
+from Cursor import Cursor
+
+
 class Logica:
 
     @classmethod
@@ -13,4 +16,4 @@ class Logica:
                 cursor.execute(sentencia,datos_cliente)
                 print("Se añadio el cliente")
         except Exception as e:
-            cls.__lanzarExcepcion(e)
+            Logica.__lanzarExcepcion(e)
